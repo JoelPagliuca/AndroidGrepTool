@@ -7,7 +7,7 @@ things a pentester should inspect
 @author: JoelPagliuca
 '''
 import os
-from stormtrooper.driver import Driver
+from androidgrep.driver import Driver
 
 if __name__ == '__main__':
     output_file = "output.xml"

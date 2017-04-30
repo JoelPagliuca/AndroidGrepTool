@@ -5,7 +5,7 @@ Created on 21 Sep 2015
 '''
 from tests import *
 from xml.etree.ElementTree import Element
-from stormtrooper.results import findings_to_xml
+from androidgrep.results import findings_to_xml
 
 class TestResults(BaseTest):
     

@@ -4,10 +4,10 @@ but it's cool
 '''
 import unittest
 
-from stormtrooper.process import *
-from stormtrooper.support import *
-from stormtrooper.finding import *
-from stormtrooper.results import *
+from androidgrep.process import *
+from androidgrep.support import *
+from androidgrep.finding import *
+from androidgrep.results import *
 
 __all__ = ['unittest', 'BaseTest']
 
