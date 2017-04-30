@@ -1,0 +1,12 @@
+<stormtrooper><category title="Weird permissions"><checks><check regex="CALL_PHONE"><file name="test_app_directory\AndroidManifest.xml"><line number="13">    &lt;uses-permission andoird:name="android.permission.CALL_PHONE" /&gt;
+</line></file></check><check regex="SEND_SMS"><file name="test_app_directory\AndroidManifest.xml"><line number="14">    &lt;uses-permission andoird:name="android.permission.SEND_SMS" /&gt;
+</line></file></check></checks></category><category title="Bad practises"><checks><check regex="WebView"><file name="test_app_directory\src\com\jdgames\sneakywordsfree\GoogleActivity.java"><line number="10">import android.webkit.WebView;
+</line><line number="11">import android.webkit.WebViewClient;
+</line><line number="17">	private class WebClient extends WebViewClient
+</line><line number="20">			public boolean shouldOverrideUrlLoading(WebView view, String url) {
+</line><line number="32">		WebView mWebView = (WebView) findViewById(R.id.webView);
+</line><line number="33">        mWebView.getSettings().setJavaScriptEnabled(true);
+</line><line number="34">        mWebView.setWebViewClient(new WebClient());
+</line><line number="35">        mWebView.setWebChromeClient(new WebChromeClient());
+</line><line number="40">        mWebView.loadUrl("http://www.google.com.au/?gws_rd=ssl#q="+currentWord);
+</line></file></check></checks></category></stormtrooper>

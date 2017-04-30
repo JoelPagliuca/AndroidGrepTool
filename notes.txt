@@ -1,0 +1,27 @@
+# finding(regex, file, line, line_number)
+regex
+file
+line (int, str)
+
+# findings(findings)
+_findings[]
+--
+get_regexes() 			-> str[]
+get_files(regex) 		-> str[]
+get_lines(file, regex) 	-> (int, str)[]
+to_xml() 				-> etree
+
+# category
+name
+type [java|manifest]
+checks
+	regex
+	impact [neutral|good|bad]
+
+XML structure * -> multiple
+results
+	*category @title
+		checks
+			*check @regex
+				*file
+					*line @number

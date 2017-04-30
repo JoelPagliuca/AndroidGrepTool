@@ -1,0 +1,77 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Stormtrooper</title>
+   </head>
+   <body>
+      <h1>Stormtrooper analysis results</h1>
+      <h2>Weird permissions</h2>
+      <ul>
+         <li>CALL_PHONE</li>
+         <ul>
+            <li>test_app_directory\AndroidManifest.xml</li>
+            <ul>
+               <li>
+                  	[13]     &lt;uses-permission andoird:name="android.permission.CALL_PHONE" /&gt;
+                  
+               </li>
+            </ul>
+         </ul>
+         <li>SEND_SMS</li>
+         <ul>
+            <li>test_app_directory\AndroidManifest.xml</li>
+            <ul>
+               <li>
+                  	[14]     &lt;uses-permission andoird:name="android.permission.SEND_SMS" /&gt;
+                  
+               </li>
+            </ul>
+         </ul>
+      </ul>
+      <h2>Bad practises</h2>
+      <ul>
+         <li>WebView</li>
+         <ul>
+            <li>test_app_directory\src\com\jdgames\sneakywordsfree\GoogleActivity.java</li>
+            <ul>
+               <li>
+                  	[10] import android.webkit.WebView;
+                  
+               </li>
+               <li>
+                  	[11] import android.webkit.WebViewClient;
+                  
+               </li>
+               <li>
+                  	[17] 	private class WebClient extends WebViewClient
+                  
+               </li>
+               <li>
+                  	[20] 			public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                  
+               </li>
+               <li>
+                  	[32] 		WebView mWebView = (WebView) findViewById(R.id.webView);
+                  
+               </li>
+               <li>
+                  	[33]         mWebView.getSettings().setJavaScriptEnabled(true);
+                  
+               </li>
+               <li>
+                  	[34]         mWebView.setWebViewClient(new WebClient());
+                  
+               </li>
+               <li>
+                  	[35]         mWebView.setWebChromeClient(new WebChromeClient());
+                  
+               </li>
+               <li>
+                  	[40]         mWebView.loadUrl("http://www.google.com.au/?gws_rd=ssl#q="+currentWord);
+                  
+               </li>
+            </ul>
+         </ul>
+      </ul>
+   </body>
+</html>
